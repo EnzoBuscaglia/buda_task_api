@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile
     image: buda_task
     container_name: drf_api
-    command: python manage.py runserver 0.0.0.0:4000
+    command: python manage.py runserver 0.0.0.0:5000
     ports:
-      - 4000:4000
+      - 5000:5000
     volumes:
       - ./manage.py:/app/manage.py
       - ./budapi:/app/budapi
