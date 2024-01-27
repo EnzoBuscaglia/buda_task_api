@@ -1,12 +1,15 @@
 version: '3.8'
 
 services:
-  fb_scraper:
+  buda_task:
     build:
       context: .
       dockerfile: Dockerfile
-    image: BUDA_TASK
+    image: buda_task
     container_name: drf_api
+    command: python manage.py runserver 0.0.0.0:4000
+    ports:
+      - 4000:4000
     volumes:
       - ./manage.py:/app/manage.py
       - ./budapi:/app/budapi
