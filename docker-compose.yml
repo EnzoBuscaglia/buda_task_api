@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  fb_scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: BUDA_TASK
+    container_name: drf_api
+    volumes:
+      - ./manage.py:/app/manage.py
+      - ./budapi:/app/budapi
+      - ./pyproject.toml:/app/pyproject.toml
+    stdin_open: true
+    tty: true
