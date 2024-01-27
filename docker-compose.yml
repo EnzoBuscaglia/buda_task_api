@@ -14,5 +14,6 @@ services:
       - ./manage.py:/app/manage.py
       - ./budapi:/app/budapi
       - ./pyproject.toml:/app/pyproject.toml
+      - ./db.sqlite3:/app/db.sqlite3
     stdin_open: true
     tty: true
