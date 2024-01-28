@@ -14,4 +14,6 @@ RUN poetry install
 RUN apt-get -qq update && \
   apt-get -qq install gettext
 
+ENV DJANGO_SETTINGS_MODULE=budapi.settings
+
 EXPOSE 5000
