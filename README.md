@@ -37,3 +37,14 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
    "alert_spread": [spread_alert_value],
    "trading_currency": "[desired_market_id_currency]"
    }
+
+## Run unit tests:
+
+\*Presumptions: no need to test DRF related libraries or include internet dependent tests.
+
+Within the container run:
+
+```docker
+python manage.py test budapi.tests.test_api_tobuda
+``
+```
