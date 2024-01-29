@@ -4,7 +4,7 @@
 
 Clone this repo.
 
-Copy .dev_env content into a .env file and add a ficticial API **secret_key**
+Copy _.dev_env_ content into a _.env_ file and add a ficticial API **secret_key**
 
 In root, build docker image running in bash:
 
