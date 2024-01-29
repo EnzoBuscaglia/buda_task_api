@@ -38,7 +38,7 @@ class MultipleMarketSpreadGetResponseSerializer(serializers.Serializer):
 
 
 class SingleMarketSpreadPostRequestSerializer(SingleMarketSpreadGetRequestSerializer):
-    spread_alert = serializers.FloatField(required=True)
+    alert_spread = serializers.FloatField(required=True)
     trading_currency = serializers.CharField(required=True, max_length=50)
 
     def validate_trading_currency(self, value):
