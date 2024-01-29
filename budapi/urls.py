@@ -5,6 +5,6 @@ from budapi import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/tobuda/", views.MarketSpreads.as_view()),
-    path("api/tobuda/all/", views.MarketSpreads.as_view()),
+    path("api/tobuda/", views.SingleMarketSpread.as_view()),
+    path("api/tobuda/all/", views.EveryMarketSpread.as_view()),
 ]
