@@ -24,6 +24,7 @@ class SingleMarketSpreadGetRequestSerializer(SecretKeyGetRequestSerializer):
             )
         return provided_market_id
 
+
 class SingleMarketSpreadGetReponseSerializer(serializers.Serializer):
     market_id = serializers.CharField(allow_null=False)
     spread_value = serializers.FloatField(allow_null=False)
