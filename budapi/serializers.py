@@ -17,12 +17,12 @@ class SingleMarketSpreadGetRequestSerializer(SecretKeyGetRequestSerializer):
     market_id = serializers.CharField(required=True, allow_blank=False)
 
     def validate_market_id(self, value):
-        provided_market_id = value.lower()
-        if provided_market_id not in get_every_public_market_id():
+        lower_market_id = value.lower()
+        if lower_market_id not in get_every_public_market_id():
             raise serializers.ValidationError(
                 "This market is not available in Buda's public API"
             )
-        return provided_market_id
+        return lower_market_id
 
 
 class SingleMarketSpreadGetReponseSerializer(serializers.Serializer):
