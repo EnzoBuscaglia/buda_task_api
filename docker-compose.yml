@@ -15,5 +15,7 @@ services:
       - ./budapi:/app/budapi
       - ./pyproject.toml:/app/pyproject.toml
       - ./db.sqlite3:/app/db.sqlite3
+    env_file:
+      - .env
     stdin_open: true
     tty: true
