@@ -1,7 +1,7 @@
 from django.conf import settings
 from rest_framework import serializers
 
-from budapi.utils import get_every_market_id
+from budapi.utils import get_every_public_market_id
 
 
 class SecretKeyGetRequestSerializer(serializers.Serializer):
@@ -18,7 +18,7 @@ class SingleMarketSpreadGetRequestSerializer(SecretKeyGetRequestSerializer):
 
     def validate_market_id(self, value):
         provided_market_id = value.lower()
-        if provided_market_id not in get_every_market_id():
+        if provided_market_id not in get_every_public_market_id():
             raise serializers.ValidationError(
                 "This market is not available in Buda's public API"
             )

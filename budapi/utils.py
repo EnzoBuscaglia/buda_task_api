@@ -2,7 +2,7 @@ import requests
 from django.conf import settings
 
 
-def get_every_market_id():
+def get_every_public_market_id():
     response = requests.get(f"{settings.BUDA_API_URL}/markets")
     if response.status_code == 200:
         market_ids = []
