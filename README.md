@@ -31,12 +31,14 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
 
 2. Set alert spread:
    POST with postman or directly into the Django DRF View (http://localhost:5000/api/tobuda):
+   ```json
    {
    "secret": "[secret_key]",
    "market_id": "[desired_market_id]",
    "alert_spread": [spread_alert_value],
    "trading_currency": "[desired_market_id_currency]"
    }
+   ```
 
 ## Run unit tests:
 
