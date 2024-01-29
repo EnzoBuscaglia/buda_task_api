@@ -36,6 +36,7 @@ class MultipleMarketSpreadGetResponseSerializer(serializers.Serializer):
         child=SingleMarketSpreadGetReponseSerializer()
     )
 
+
 class SingleMarketSpreadPostRequestSerializer(SingleMarketSpreadGetRequestSerializer):
     alert_spread = serializers.FloatField(required=True)
     trading_currency = serializers.CharField(required=True, max_length=50)
