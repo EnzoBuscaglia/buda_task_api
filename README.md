@@ -22,7 +22,18 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
 
 ## Hit the API:
 
+1. Ask for spreads:
+
 - Single market spread:
   http://localhost:5000/api/tobuda/?secret=[secret_key]&market_id=[desired_market_id]
 - Every available market spread:
   http://localhost:5000/api/tobuda/all/?secret=[secret_key]
+
+2. Set alert spread:
+   POST with postman or directly into the Django DRF View (http://localhost:5000/api/tobuda):
+   {
+   "secret": "[secret_key]",
+   "market_id": "[desired_market_id]",
+   "alert_spread": [spread_alert_value],
+   "trading_currency": "[desired_market_id_currency]"
+   }
