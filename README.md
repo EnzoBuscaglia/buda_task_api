@@ -4,7 +4,7 @@
 
 Clone this repo.
 
-Copy _.dev_env_ content into a _.env_ file and add a ficticial API **secret_key**
+Copy _.dev_env_ content into a _.env_ file and add a ficticial API **secret_key** and the Buda API endpoint.
 
 In root, build docker image running in bash:
 
