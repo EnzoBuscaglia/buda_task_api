@@ -11,5 +11,4 @@ def get_markets_ids():
             if market_id:
                 market_ids.append(market_id.lower())
         return market_ids
-    else:
-        print("Failed to fetch data. Status code:", response.status_code)
+    return None
