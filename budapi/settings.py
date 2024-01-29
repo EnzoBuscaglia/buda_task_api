@@ -114,5 +114,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-BUDA_API_URL = os.environ.get("BUDA_API_URL","https://www.buda.com/api/v2")
-BUDAPI_SECRET_KEY = os.environ.get("BUDAPI_SECRET_KEY", "3MWmXlhcg7it6hWSoWjVFzygAjw2W8CY")
+BUDA_API_URL = os.environ.get("BUDA_API_URL","")
+BUDAPI_SECRET_KEY = os.environ.get("BUDAPI_SECRET_KEY", "")
