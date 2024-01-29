@@ -35,3 +35,18 @@ class MultipleMarketSpreadGetResponseSerializer(serializers.Serializer):
     all_markets_spread_data = serializers.ListField(
         child=SingleMarketSpreadGetReponseSerializer()
     )
+
+class SingleMarketSpreadPostRequestSerializer(SingleMarketSpreadGetRequestSerializer):
+    alert_spread = serializers.FloatField(required=True)
+    trading_currency = serializers.CharField(required=True, max_length=50)
+
+    def validate_trading_currency(self, value):
+        market_id = self.initial_data.get("market_id", "")
+        lower_trading_currency = value.lower()
+        if "-" in market_id:
+            if lower_trading_currency != market_id.split("-", 1)[1]:
+                raise serializers.ValidationError(
+                    "Invalid trading currency for the given market"
+                )
+            return lower_trading_currency
+        raise serializers.ValidationError("Invalid market_id format")
