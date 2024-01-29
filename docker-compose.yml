@@ -11,10 +11,11 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - ./manage.py:/app/manage.py
-      - ./budapi:/app/budapi
       - ./pyproject.toml:/app/pyproject.toml
       - ./db.sqlite3:/app/db.sqlite3
+      - ./manage.py:/app/manage.py
+      - ./budapi:/app/budapi
+      - ./model:/app/model
     env_file:
       - .env
     stdin_open: true

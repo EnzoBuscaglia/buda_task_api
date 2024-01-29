@@ -6,5 +6,8 @@ __pycache__/
 ### SECRETS
 .env
 
+### DJANGO
+db.sqlite3
+
 notebooks/
 code_guide.txt
