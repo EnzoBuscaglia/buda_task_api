@@ -14,4 +14,4 @@ def calculate_single_market_spread(market_id):
                 float(data["min_ask"][0]) - float(data["max_bid"][0]),
                 data["min_ask"][1],
             )
-    return None
+    return None, None
