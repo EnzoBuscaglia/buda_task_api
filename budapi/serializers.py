@@ -29,3 +29,9 @@ class SingleMarketSpreadGetReponseSerializer(serializers.Serializer):
     market_id = serializers.CharField(allow_null=False)
     spread_value = serializers.FloatField(allow_null=False)
     trading_currency = serializers.CharField(allow_null=False)
+
+
+class MultipleMarketSpreadGetResponseSerializer(serializers.Serializer):
+    all_markets_spread_data = serializers.ListField(
+        child=SingleMarketSpreadGetReponseSerializer()
+    )
