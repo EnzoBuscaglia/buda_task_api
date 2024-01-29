@@ -3,5 +3,8 @@
 __pycache__/
 *.py[cod]
 
+### SECRETS
+.env
+
 notebooks/
 code_guide.txt

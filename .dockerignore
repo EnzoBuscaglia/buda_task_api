@@ -1,4 +1,5 @@
 .gitignore
+.env
 README.md
 docker-compose.yml
 Dockerfile*
