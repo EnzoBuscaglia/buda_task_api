@@ -12,7 +12,7 @@ In root, build docker image running in bash:
 docker-compose up --build -d
 ```
 
-Create user by running in Docker container shell:
+Create user by running in Docker container shell (not necessary to hit the API):
 
 ```docker
 python manage.py createsuperuser
