@@ -32,7 +32,7 @@ class MarketSpreadsTestCase(TestCase):
             "eth-clp": (9514.0, "clp"),
         }
         def mock_spread_func(market_id):
-            return mock_spreads.get(market_id, (None, None))
+            return mock_spreads.get(market_id, (None, None)) # TODO: check mock_spreads[market_id]
 
         mock_calculate_single_market_spread.side_effect = mock_spread_func
         result = get_all_market_spreads()
