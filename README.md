@@ -48,6 +48,9 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
 
 Good use case would be to hit the GET single market spread endpoint and pass the resulting content as the POST content to the same endpoint to set spread alert.
 
+3. Run polling for a single market:
+   http://localhost:5000/api/tobuda/poll/?secret=[secret_key]&market_id=[desired_market_id]
+
 ## Run unit tests:
 
 \*Presumptions: no need to test DRF related libraries or include internet dependent tests.
