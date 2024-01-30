@@ -30,7 +30,7 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
 
 1. Ask for spreads:
 
-- Single market spread:
+- Single market spread:  
   http://localhost:5000/api/tobuda/?secret=[secret_key]&market_id=[desired_market_id]
 - Every available market spread:
   http://localhost:5000/api/tobuda/all/?secret=[secret_key]
@@ -45,6 +45,8 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
    "trading_currency": "[desired_market_id_currency]"
    }
    ```
+
+Good use case would be to hit the GET single market spread endpoint and pass the resulting content as the POST content to the same endpoint to set spread alert.
 
 ## Run unit tests:
 
