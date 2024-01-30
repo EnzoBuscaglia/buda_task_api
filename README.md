@@ -1,5 +1,11 @@
 # API TO CONNECT TO BUDA'S PUBLIC API: Spread challenge.
 
+\*Assumptions: every requirement should be part of the API, meaning:
+
+- There is an endpoint to GET single market spread and POST single market alert spread for future polling.
+- There is an endpoint to GET every publicly available market spread in a single call.
+- There is an endpoint to poll a single market and check if current spread is higher than saved alert spread for that market.
+
 ## To Run:
 
 Clone this repo.
