@@ -30,13 +30,11 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
 
 1. Ask for spreads:
 
-- Single market spread:  
-  http://localhost:5000/api/tobuda/?secret=[secret_key]&market_id=[desired_market_id]
-- Every available market spread:
-  http://localhost:5000/api/tobuda/all/?secret=[secret_key]
+- [Single market spread](http://localhost:5000/api/tobuda/?secret=[secret_key]&market_id=[desired_market_id])
+- [Every available market spread](http://localhost:5000/api/tobuda/all/?secret=[secret_key])
 
 2. Set alert spread:
-   POST with postman or directly into the Django DRF View (http://localhost:5000/api/tobuda):
+   POST with postman or directly into the [Django DRF View](http://localhost:5000/api/tobuda):
    ```json
    {
    "secret": "[secret_key]",
@@ -48,8 +46,7 @@ Access the admin view browsing to: http://localhost:5000/admin (to check spreads
 
 Good use case would be to hit the GET single market spread endpoint and pass the resulting content as the POST content to the same endpoint to set spread alert.
 
-3. Run polling for a single market:
-   http://localhost:5000/api/tobuda/poll/?secret=[secret_key]&market_id=[desired_market_id]
+3. [Run polling for a single market](http://localhost:5000/api/tobuda/poll/?secret=[secret_key]&market_id=[desired_market_id])
 
 ## Run unit tests:
 
