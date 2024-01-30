@@ -56,5 +56,4 @@ Within the container run:
 
 ```docker
 python manage.py test budapi.tests.test_api_tobuda
-``
 ```
