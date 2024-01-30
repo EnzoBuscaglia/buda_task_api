@@ -24,7 +24,7 @@ Create user by running in Docker container shell (not necessary to hit the API):
 python manage.py createsuperuser
 ```
 
-Access the admin view browsing to: http://localhost:5000/admin (to check spreads threshold alert)
+Access the admin view browsing to: http://localhost:5000/admin (to check spreads threshold alert). To log-in use dummy user: devdev, pass: 123456.
 
 ## Hit the API:
 
