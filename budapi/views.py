@@ -109,7 +109,7 @@ class SingleMarketSpreadPoll(APIView):
         )
 
 
-class AllMarketSpread(APIView):
+class AllMarketsSpread(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
