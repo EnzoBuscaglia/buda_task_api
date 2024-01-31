@@ -12,6 +12,7 @@ services:
       - 5000:5000
     volumes:
       - ./pyproject.toml:/app/pyproject.toml
+      - ./.prospector.yaml:/app/.prospector.yaml
       - ./db.sqlite3:/app/db.sqlite3
       - ./manage.py:/app/manage.py
       - ./budapi:/app/budapi

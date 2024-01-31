@@ -11,10 +11,11 @@ django = "^5.0.1"
 djangorestframework = "^3.14.0"
 requests = "^2.31.0"
 
+[tool.poetry.group.dev.dependencies]
+prospector = "^1.10.3"
+black = "^24.1.1"
+isort = "^5.13.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.dev-dependencies]
-black = "^24.1.1"
-isort = "^5.13.2"
