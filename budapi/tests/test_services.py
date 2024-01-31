@@ -2,8 +2,7 @@ from unittest.mock import patch
 
 from django.test import TestCase
 
-from budapi.services.base import (calculate_single_market_spread,
-                                  get_all_market_spreads)
+from budapi.services.base import calculate_single_market_spread, get_all_market_spreads
 
 
 class MarketSpreadsTestCase(TestCase):
@@ -31,14 +30,17 @@ class MarketSpreadsTestCase(TestCase):
             "ltc-pen": (4.880000000000024, "pen"),
             "eth-clp": (9514.0, "clp"),
         }
+
         def mock_spread_func(market_id):
-            return mock_spreads.get(market_id, (None, None)) # TODO: check mock_spreads[market_id]
+            return mock_spreads.get(
+                market_id, (None, None)
+            )  # TODO: check mock_spreads[market_id]
 
         mock_calculate_single_market_spread.side_effect = mock_spread_func
         result = get_all_market_spreads()
         expected_result = [
-        ("btc-clp", 250621.4699999988, "clp"),
-        ("eth-clp", 9514.0, "clp"),
-        ("ltc-pen", 4.880000000000024, "pen"),
+            ("btc-clp", 250621.4699999988, "clp"),
+            ("eth-clp", 9514.0, "clp"),
+            ("ltc-pen", 4.880000000000024, "pen"),
         ]
         self.assertEqual(result, expected_result)
