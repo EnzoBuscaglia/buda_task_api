@@ -140,7 +140,6 @@ class AllMarketsSpread(APIView):
             return Response(
                 response_serializer.validated_data, status=status.HTTP_200_OK
             )
-        else:
-            return Response(
-                response_serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+        return Response(
+            response_serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
