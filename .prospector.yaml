@@ -1,0 +1,20 @@
+ignore-patterns:
+  - (^|/)migrations(/|$)
+strictness: medium
+uses:
+  - django
+  - celery
+pyflakes:
+  run: false
+pep8:
+  run: false
+mccabe:
+  run: false
+pylint:
+  disable:
+    - too-many-arguments
+    - too-many-locals
+    - too-many-nested-blocks
+    - too-many-branches
+  options:
+    ignored-argument-names: args|kwargs
